@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Sofia+Sans&family=Young+Serif&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Sofia Sans', Courier, monospace;
+}
+
+/* CSS bloc généraux */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+  width: 100%;
+}
+
+h1, h2 {
+  font-family: 'Irish Grover', Courier, monospace;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin: 50px 0;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Young Serif', Courier, monospace;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#presentation, #localisation, #services, #contact {
+  scroll-margin: 70px;
+}
+
+/* header */
+.header {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  height: 120px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .3));
+  backdrop-filter: blur(15px);
+}
+
+.header_navbar {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 5px;
+  justify-content: space-around;
+}
+
+.header_navbar_item {
+  width: 40%;
+  text-align: center;
+}
+
+/* image magasin */
+.imgMagasin {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  max-height: 525px;
+}
+
+/* section "presentation" */
+.presentation {
+  background-color: rgb(192, 192, 255);
+}
+.presentation_paragraphe {
+  line-height: 25px;
+  padding: 10px 0;
+}
+
+/* section "nous trouver" */
+.localisation {
+  padding: 20px 0;
+}
+.localisation_carte {
+  position: relative;
+  width: 100%;
+}
+
+.localisation_carte_googlemap {
+  width: 100%;
+}
+
+.localisation_carte_googlemap_boutonItineraire {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 25px;
+  left : calc(50% - 6rem);
+  width: 120px;
+  height: 30px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+  border: 1px solid black;
+  border-radius: 25px;
+  background-color: rgb(192, 192, 255);
+}
+
+.localisation_contactHoraires {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 50px 0;
+}
+
+.localisation_contactHoraires_contact {
+  width: 100%;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(192, 192, 255);
+}
+
+.localisation_contactHoraires_contact_paragraphe {
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+  width: 320px;
+}
+
+.localisation_contactHoraires_contact_img {
+  margin: 10px 20px;
+}
+
+.localisation_contactHoraires_horaires {
+  border-collapse: collapse;
+}
+
+.localisation_contactHoraires_horaires tr {
+  height: 35px;
+}
+
+.localisation_contactHoraires_horaires_colJourSemaine {
+  width: 80px;
+  padding-left: 10px;
+}
+
+.localisation_contactHoraires_horaires_colHoraires {
+  width: 110px;
+  text-align: center;
+}
+
+.currentDay {
+  color: rgb(60, 255, 0);
+  font-weight: bold;
+  background-color: black;
+  border: 2px solid black;
+}
+
+/* section "services" */
+.services {
+  background-color: rgb(192, 192, 255);
+}
+
+.services_liste {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.services_liste_service {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  column-gap: 10px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.services_liste_service_img {
+  width: 25%;
+  max-width: 76px;
+  height: auto;
+}
+
+.services_liste_service_content {
+  width: 75%;
+}
+
+.services_liste_service_content_paragraphe {
+  padding: 10px;
+}
+
+/* section "confiance" */
+.confiance {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confiance_liste {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.confiance_liste_logo {
+  width:100%;
+  max-width: 150px;
+  height: auto;
+}
+
+/* footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 30px;
+  background-color: rgb(192, 192, 255);
+}
+
+.footer_coordonnees {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 15px;
+}
+
+@media (width > 500px) {
+  /* header */
+  .header_navbar_item {
+    width: unset;
+  }
+}
+
+@media (width >= 690px) {
+
+  /* header */
+  .header_navbar {
+    width: 500px;
+  }
+
+  /* section "presentation" */
+  .presentation_paragraphe {
+    padding: 10px 0;
+  }
+
+  /* section "nous trouver" */
+  .localisation {
+    padding: 20px 10px;
+  }
+
+  .localisation_contactHoraires {
+    flex-flow: row nowrap;
+  }
+
+  .localisation_contactHoraires_contact {
+    width: 50%;
+    max-width: 460px;
+    background-color: unset;
+  }
+
+  .services_liste {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .localisation_contactHoraires_horaires {
+    max-width: 460px;
+  }
+
+  .localisation_contactHoraires_horaires_colJourSemaine {
+    width: 100px;
+  }
+  
+  .localisation_contactHoraires_horaires_colHoraires {
+    width: 180px;
+    max-width: unset;
+  }
+
+  /* section "services" */
+  .services_liste_service {
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .services_liste_service_content {
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+  }
+
+  /* footer */
+.footer_coordonnees {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  }
+}
+
+@media (width > 800px) {
+
+  /* header */
+  .header {
+    flex-direction: row;
+  }
+}
+
+@media (width > 1200px) {
+
+  /* section "services" */
+  .services_liste_service {
+    width: 25%;
+  }
+}
+
+@media (width > 1600px) {
+
+  .imgMagasin {
+    max-height: 725px;
+  }
+}
+
+@media (width > 2100px) {
+
+  .imgMagasin {
+    max-height: 825px;
+  }
+}
